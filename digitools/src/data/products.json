@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "name": "AI Writing Pro",
+      "description": "Generate high-quality content",
+      "price": 29,
+      "period": "monthly",
+      "tag": "Best Seller",
+      "tagType": "warning",
+      "icon": "✍️",
+      "features": ["Unlimited AI generations", "SEO writing", "Grammar checker"]
+    },
+    {
+      "id": 2,
+      "name": "Design Templates Pack",
+      "description": "2000+ professional templates",
+      "price": 49,
+      "period": "one-time",
+      "tag": "Popular",
+      "tagType": "info",
+      "icon": "🎨",
+      "features": ["2000+ templates", "Editable Figma", "Commercial use"]
+    },
+    {
+      "id": 3,
+      "name": "Premium Stock Assets",
+      "description": "Millions of stock photos",
+      "price": 19,
+      "period": "monthly",
+      "tag": "New",
+      "tagType": "success",
+      "icon": "📷",
+      "features": ["10M assets", "HD quality", "Unlimited downloads"]
+    },
+    {
+      "id": 4,
+      "name": "Automation Toolkit",
+      "description": "Automate repetitive tasks",
+      "price": 79,
+      "period": "yearly",
+      "tag": "Popular",
+      "tagType": "info",
+      "icon": "⚙️",
+      "features": ["API automation", "Workflow builder", "Cloud sync"]
+    },
+    {
+      "id": 5,
+      "name": "Resume Builder Pro",
+      "description": "Create professional resumes",
+      "price": 15,
+      "period": "one-time",
+      "tag": "New",
+      "tagType": "success",
+      "icon": "📄",
+      "features": ["ATS optimized", "Export PDF", "Templates"]
+    },
+    {
+      "id": 6,
+      "name": "Social Media Content Kit",
+      "description": "Ready social content pack",
+      "price": 39,
+      "period": "monthly",
+      "tag": "Best Seller",
+      "tagType": "warning",
+      "icon": "📱",
+      "features": ["300+ assets", "Editable", "Commercial license"]
+    }
+  ]
+  
