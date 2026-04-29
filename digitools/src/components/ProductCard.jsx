@@ -1,26 +1,63 @@
+import { useState } from "react";
 import { toast } from "react-toastify";
 
-export default function ProductCard({ product, addToCart }) {
+const ProductCard = ({ product, addToCart }) => {
+  const [added, setAdded] = useState(false);
+
+  const handleClick = () => {
+    addToCart(product);
+
+    setAdded(true);
+
+    toast.success(`${product.name} added to cart`);
+
+    setTimeout(() => {
+      setAdded(false);
+    }, 2000);
+  };
+
   return (
-    <div className="card bg-base-100 shadow-md p-4">
-      <div className="text-4xl">{product.icon}</div>
-      <h2 className="text-xl font-bold">{product.name}</h2>
-      <p>{product.description}</p>
-      <p className="font-semibold">${product.price} / {product.period}</p>
-      <div className={`badge ${product.tagType}`}>{product.tag}</div>
-      <ul className="mt-2 list-disc list-inside">
-        {product.features.map((f, i) => <li key={i}>{f}</li>)}
+    <div className="border rounded-xl p-6 relative shadow-sm hover:shadow-md transition">
+
+      <img
+        src={product.icon}
+        alt={product.name}
+        className="w-12 h-12 mb-4"
+      />
+
+
+      <h3 className="font-semibold text-lg">
+        {product.name}
+      </h3>
+
+      <p className="text-gray-500 text-sm mb-2">
+        {product.description}
+      </p>
+
+  
+      <p className="font-bold mb-3">
+        ${product.price}/{product.period}
+      </p>
+
+   
+      <ul className="text-sm mb-4">
+        {product.features.map((f, i) => (
+          <li key={i}>✔ {f}</li>
+        ))}
       </ul>
-      <button 
-        className="btn btn-primary mt-3"
-        onClick={() => {
-          addToCart(product);
-          toast.success(`${product.name} added to cart!`);
-        }}
+
+ 
+      <button
+        onClick={handleClick}
+        className="w-full py-2 rounded-full text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]"
       >
         Buy Now
       </button>
+
     </div>
   );
-}
+};
+
+export default ProductCard;
+
 
