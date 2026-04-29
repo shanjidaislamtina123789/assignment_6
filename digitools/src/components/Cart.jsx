@@ -1,6 +1,5 @@
 const Cart = ({ cart, removeItem, checkout }) => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
-
   return (
     <div className="max-w-3xl mx-auto border rounded-xl p-6 mt-10">
 
@@ -22,7 +21,6 @@ const Cart = ({ cart, removeItem, checkout }) => {
         </div>
       ) : (
         <>
-
           <div className="space-y-4">
             {cart.map((item) => (
               <div

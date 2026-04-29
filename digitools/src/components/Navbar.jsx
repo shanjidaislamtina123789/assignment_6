@@ -1,5 +1,4 @@
 import React from "react";
-
 const Navbar = ({ cartCount }) => {
   return (
     <nav className="flex items-center justify-between px-10 py-5 bg-white border-b border-gray-100">

@@ -3,7 +3,6 @@ import { FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-
       <div className="bg-[linear-gradient(90deg,#4F39F6_0%,#9514FA_100%)] text-white py-20 text-center">
 
         <h2 className="text-3xl font-bold mb-3">
@@ -26,13 +25,11 @@ const Footer = () => {
           </button>
 
         </div>
-
         <p className="text-xs opacity-70">
           14-day free trial • No credit card required • Cancel anytime
         </p>
 
       </div>
-
 
       <div className="bg-[#0F172A] text-white py-14">
 

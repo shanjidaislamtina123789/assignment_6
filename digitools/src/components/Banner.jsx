@@ -5,7 +5,6 @@ const colors = {
 
   myGradient: "linear-gradient(90deg, #4F39F6 0%, #9514FA 100%)"
 };
-
 const Banner = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
@@ -19,8 +18,7 @@ const Banner = () => {
             <span className="text-sm font-medium" style={{ color: ' #9514FA' }}>
               New: AI-Powered Tools Available
             </span>
-          </div>
-          
+          </div>         
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6" style={{ color: colors.accent }}>
             Supercharge Your <br />
             Digital Workflow
@@ -51,8 +49,7 @@ const Banner = () => {
     </span>
   </button>
 
-</div>
-        
+</div>       
           </div>
         </div>
 

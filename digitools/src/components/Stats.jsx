@@ -9,7 +9,6 @@ const Stats = () => {
           <p className="text-sm mt-1 opacity-80">Active Users</p>
         </div>
 
-
         <div className="py-6 md:border-r md:border-white/30">
           <h2 className="text-3xl font-bold">200+</h2>
           <p className="text-sm mt-1 opacity-80">Premium Tools</p>
@@ -24,7 +23,6 @@ const Stats = () => {
     </div>
   );
 };
-
 export default Stats;
 
 

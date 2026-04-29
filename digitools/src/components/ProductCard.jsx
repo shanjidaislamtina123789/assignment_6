@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-
 const ProductCard = ({ product, addToCart }) => {
   const [added, setAdded] = useState(false);
 
@@ -15,7 +14,6 @@ const ProductCard = ({ product, addToCart }) => {
       setAdded(false);
     }, 2000);
   };
-
   return (
     <div className="border rounded-xl p-6 relative shadow-sm hover:shadow-md transition">
 

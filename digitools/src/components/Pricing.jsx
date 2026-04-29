@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Pricing = () => {
   return (
     <div className="py-16 bg-gray-50 text-center font-sans">
@@ -13,7 +12,6 @@ const Pricing = () => {
         </p>
       </div>
 
-   
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
 
         <div className="bg-white p-6 rounded-xl shadow border text-left flex flex-col justify-between">
