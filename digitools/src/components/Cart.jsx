@@ -1,43 +1,83 @@
 import { toast } from "react-toastify";
 
-export default function Cart({ cartItems, removeFromCart, proceedCheckout }) {
-  const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+const Cart = ({ cart, removeItem, checkout }) => {
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  const handleRemove = (id) => {
+    removeItem(id);
+    toast.error("Item removed!");
+  };
+
+  const handleCheckout = () => {
+    checkout();
+    toast.success("Checkout successful!");
+  };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
-      {cartItems.length === 0 ? (
-        <p>No items in cart.</p>
+    <div className="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow">
+
+      <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
+
+      {cart.length === 0 ? (
+        <p className="text-gray-500 text-center py-10">
+          Your cart is empty
+        </p>
       ) : (
-        <div>
-          {cartItems.map(item => (
-            <div key={item.id} className="flex justify-between items-center border-b py-2">
-              <span>{item.icon} {item.name}</span>
-              <span>${item.price}</span>
-              <button 
-                className="btn btn-sm btn-error"
-                onClick={() => {
-                  removeFromCart(item.id);
-                  toast.info(`${item.name} removed from cart`);
-                }}
+        <>
+
+          <div className="space-y-4">
+
+            {cart.map((item) => (
+              <div
+                key={item.id}
+                className="flex justify-between items-center bg-gray-100 p-4 rounded-lg"
               >
-                Remove
-              </button>
-            </div>
-          ))}
-          <div className="mt-4 font-bold">Total: ${total}</div>
-          <button 
-            className="btn btn-success mt-4"
-            onClick={() => {
-              proceedCheckout();
-              toast.success("Checkout complete!");
-            }}
+                <div className="flex items-center gap-3">
+                  <img
+                    src={item.icon}
+                    alt={item.name}
+                    className="w-10 h-10"
+                  />
+                  <div>
+                    <h4 className="font-medium">{item.name}</h4>
+                    <p className="text-sm text-gray-500">
+                      ${item.price}
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => handleRemove(item.id)}
+                  className="text-red-500 text-sm hover:underline"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
+
+          </div>
+
+ 
+          <div className="flex justify-between mt-6 text-sm text-gray-600">
+            <span>Total:</span>
+            <span className="font-semibold text-black">
+              ${total}
+            </span>
+          </div>
+
+
+          <button
+            onClick={handleCheckout}
+            className="w-full mt-4 py-3 rounded-full text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]"
           >
-            Proceed to Checkout
+            Proceed To Checkout
           </button>
-        </div>
+        </>
       )}
     </div>
   );
-}
+};
+
+export default Cart;
+
 
