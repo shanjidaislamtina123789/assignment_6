@@ -11,8 +11,7 @@ const Steps = () => {
       </p>
 
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
-
-      
+    
         <div className="p-6 border rounded-lg">
           <div className="flex justify-center items-center mb-4">
           <img src="/images/user.png" alt="user" className="w-12 h-12"/>
@@ -22,8 +21,7 @@ const Steps = () => {
             Sign up for free in seconds.
           </p>
         </div>
-
-      
+    
         <div className="p-6 border rounded-lg">
           <div className="flex justify-center items-center mb-4">
           <img src="/images/package.png" alt="user" className="w-12 h-12"/>

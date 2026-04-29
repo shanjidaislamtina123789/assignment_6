@@ -68,13 +68,10 @@ function App() {
             </button>
           </div>
         </div>
-
         <div className="max-w-6xl mx-auto px-4">
-
           {view === "products" && (
             <Products addToCart={addToCart} />
           )}
-
           {view === "cart" && (
             <Cart
               cart={cart}
@@ -82,10 +79,8 @@ function App() {
               checkout={checkout}
             />
           )}
-
         </div>
       </div>
-
       <Steps />
       <Pricing />
       <Footer />
@@ -94,7 +89,6 @@ function App() {
     </div>
   );
 }
-
 export default App;
 
 
