@@ -48,6 +48,7 @@ function App() {
             Choose from our curated collection of premium tools
           </p>
 
+
           <div className="mt-4 flex justify-center gap-3">
             <button
               onClick={() => setView("products")}
@@ -57,6 +58,7 @@ function App() {
             >
               Products
             </button>
+
 
             <button
               onClick={() => setView("cart")}
@@ -68,6 +70,7 @@ function App() {
             </button>
           </div>
         </div>
+        
         <div className="max-w-6xl mx-auto px-4">
           {view === "products" && (
             <Products addToCart={addToCart} />
